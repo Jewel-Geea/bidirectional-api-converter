@@ -4,13 +4,13 @@ echo "🚀 Starting API Converter..."
 echo ""
 
 echo "📦 Starting backend..."
-cd backend && poetry run python src/main.py &
+cd backend && PYTHONPATH=. poetry run python src/main.py &
 BACKEND_PID=$!
 
 sleep 2
 
 echo "🎨 Starting frontend..."
-cd ../frontend && npm run dev &
+cd frontend && npm run dev &
 FRONTEND_PID=$!
 
 echo ""
