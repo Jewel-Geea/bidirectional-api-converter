@@ -27,7 +27,7 @@ type Mutation {
   createUser(name: String!, email: String!, age: Int): User!
   updateUser(id: ID!, name: String, email: String, age: Int): User!
   deleteUser(id: ID!): Boolean!
-  
+
   createPost(title: String!, content: String!, authorId: ID!): Post!
   updatePost(id: ID!, title: String, content: String, published: Boolean): Post!
   deletePost(id: ID!): Boolean!

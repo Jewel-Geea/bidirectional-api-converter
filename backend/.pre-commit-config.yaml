@@ -11,24 +11,34 @@ repos:
     rev: 26.1.0
     hooks:
       - id: black
-        language_version: python3.14
+        files: ^backend/src/
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.15.4
     hooks:
       - id: ruff
         args: [--fix]
+        files: ^backend/src/
 
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.19.1
     hooks:
       - id: mypy
-        additional_dependencies: [types-all]
-        args: [--ignore-missing-imports]
+        args: [--python-version=3.10, --ignore-missing-imports, backend/src]
+        files: ^backend/src/
+        pass_filenames: false
+        additional_dependencies:
+          - pydantic>=2.0
+          - pydantic-settings>=2.0
+          - fastapi>=0.100
+          - graphql-core>=3.2
+          - httpx>=0.28
 
   - repo: https://github.com/PyCQA/bandit
     rev: 1.9.4
     hooks:
       - id: bandit
-        args: ["-c", "pyproject.toml"]
+        args: ["-r", "backend/src", "-c", "backend/pyproject.toml"]
+        files: ^backend/src/
+        pass_filenames: false
         additional_dependencies: ["bandit[toml]"]

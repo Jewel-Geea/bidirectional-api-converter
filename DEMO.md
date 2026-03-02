@@ -42,7 +42,7 @@ type Mutation {
   createUser(name: String!, email: String!, age: Int): User!
   updateUser(id: ID!, name: String, email: String): User!
   deleteUser(id: ID!): Boolean!
-  
+
   createPost(title: String!, content: String!, authorId: ID!): Post!
   deletePost(id: ID!): Boolean!
 }

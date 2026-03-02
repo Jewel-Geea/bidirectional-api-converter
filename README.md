@@ -50,7 +50,7 @@ npm run dev
 ./start.sh
 ```
 
-Backend runs at `http://localhost:8000`  
+Backend runs at `http://localhost:8000`
 Frontend runs at `http://localhost:5173`
 
 ### Run Tests

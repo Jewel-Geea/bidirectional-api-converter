@@ -3,7 +3,7 @@ name = "api-converter"
 version = "0.1.0"
 description = "GraphQL ↔ REST Converter"
 authors = ["jewel"]
-readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -11,6 +11,7 @@ fastapi = "^0.135.0"
 uvicorn = {extras = ["standard"], version = "^0.41.0"}
 graphql-core = "^3.2.7"
 pydantic = "^2.12.5"
+pydantic-settings = "^2.0.0"
 httpx = "^0.28.1"
 
 [tool.poetry.group.dev.dependencies]
@@ -38,8 +39,9 @@ python_version = "3.10"
 warn_return_any = true
 warn_unused_configs = true
 disallow_untyped_defs = false
-ignore_missing_imports = true
+explicit_package_bases = true
+exclude = ["tests", "venv"]
 
 [tool.bandit]
-exclude_dirs = ["tests", "venv"]
+exclude_dirs = ["tests", "venv", ".venv"]
 skips = ["B101"]
