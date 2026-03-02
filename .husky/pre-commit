@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Backend pre-commit hooks
+cd backend && poetry run pre-commit run --all-files
+cd ..
+
+# Frontend pre-commit hooks
+cd frontend && npx lint-staged

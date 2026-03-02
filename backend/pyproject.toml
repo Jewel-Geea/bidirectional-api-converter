@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "api-converter"
+version = "0.1.0"
+description = "GraphQL ↔ REST Converter"
+authors = ["jewel"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.135.0"
+uvicorn = {extras = ["standard"], version = "^0.41.0"}
+graphql-core = "^3.2.7"
+pydantic = "^2.12.5"
+httpx = "^0.28.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^26.1.0"
+mypy = "^1.19.1"
+bandit = "^1.9.4"
+pre-commit = "^4.5.1"
+ruff = "^0.15.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+target-version = ['py310']
+include = '\.pyi?$'
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true
+
+[tool.bandit]
+exclude_dirs = ["tests", "venv"]
+skips = ["B101"]

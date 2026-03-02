@@ -1,0 +1,17 @@
+{
+  "name": "api-converter-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"cd backend && poetry run python main.py\" \"cd frontend && npm run dev\"",
+    "dev:backend": "cd backend && poetry run python main.py",
+    "dev:frontend": "cd frontend && npm run dev",
+    "install:all": "cd backend && poetry install && cd ../frontend && npm install",
+    "test": "./test.sh",
+    "prepare": "husky || true"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "husky": "^9.1.7"
+  }
+}
