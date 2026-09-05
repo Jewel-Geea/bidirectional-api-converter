@@ -1,5 +1,10 @@
 # API Converter - GraphQL ↔ REST
 
+![Python](https://img.shields.io/badge/python-3670A0?style=flat-square&logo=python&logoColor=ffdd54)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat-square&logo=fastapi)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=flat-square&logo=react&logoColor=%2361DAFB)
+![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)
+
 Bi-directional API converter that transforms GraphQL schemas to REST APIs and vice versa, with auto-generated production-ready code.
 
 ## ✨ Features
