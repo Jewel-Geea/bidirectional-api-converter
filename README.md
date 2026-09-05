@@ -7,16 +7,16 @@
 
 Bi-directional API converter that transforms GraphQL schemas to REST APIs and vice versa, with auto-generated production-ready code.
 
-## ✨ Features
+## Features
 
-- 🔄 **GraphQL → REST**: Convert GraphQL schemas to REST endpoints + FastAPI code
-- 🔄 **REST → GraphQL**: Convert OpenAPI specs to GraphQL schemas + Strawberry resolvers
-- 📝 Auto-generate complete, working Python code
-- 🎨 Interactive web interface with real-time conversion
-- 🛠️ Production-ready code with proper structure
-- 🎯 Smart endpoint mapping based on naming conventions
+- **GraphQL → REST**: Convert GraphQL schemas to REST endpoints + FastAPI code
+- **REST → GraphQL**: Convert OpenAPI specs to GraphQL schemas + Strawberry resolvers
+- Auto-generate complete, working Python code
+- Interactive web interface with real-time conversion
+- Production-ready code with proper structure
+- Smart endpoint mapping based on naming conventions
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.10+
@@ -64,7 +64,7 @@ Frontend runs at `http://localhost:5173`
 ./test.sh
 ```
 
-## 📖 Usage
+## Usage
 
 ### GraphQL → REST Example
 
@@ -115,7 +115,7 @@ type Mutation {
 - Strawberry resolver code with httpx client
 - Automatic type generation
 
-## 🧪 Testing
+## Testing
 
 Sample files provided in `examples/`:
 - `sample-schema.graphql` - GraphQL schema example
@@ -123,7 +123,7 @@ Sample files provided in `examples/`:
 
 Copy and paste into the UI to test conversions.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 **Backend:**
 - FastAPI - Modern Python web framework
@@ -137,7 +137,7 @@ Copy and paste into the UI to test conversions.
 - Husky + lint-staged - Git hooks
 - ESLint + Prettier - Code quality
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 api-converter/
@@ -159,7 +159,7 @@ api-converter/
 └── README.md
 ```
 
-## 🔧 Development
+## Development
 
 ### Backend Commands
 
@@ -205,7 +205,7 @@ npm run format
 npm run lint
 ```
 
-## 🎯 What Makes This Unique
+## What Makes This Unique
 
 - **Bi-directional conversion** - Most tools only go one way
 - **Production-ready code** - Not just specs, but actual working implementations
@@ -213,14 +213,10 @@ npm run lint
 - **Type preservation** - Maintains type information across conversions
 - **Clean architecture** - Separation of concerns, modular design
 
-## 🤝 Contributing
+## Contributing
 
 This is a learning project built to understand API design patterns and code generation techniques.
 
-## 📝 License
+## License
 
 MIT
-
----
-
-Built with ☕ and curiosity about API design patterns.
